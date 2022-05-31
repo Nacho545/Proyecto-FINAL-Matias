@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Tapestry&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* -- ESTILOS NAVBAR -- */
+
+.header {
+    font-family: sans-serif;
+    background-color: #264579;
+    height: 80px;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: 992px;
+    margin: 0 auto auto;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0 40px;
+    line-height: 80px;
+}
+
+.logo img {
+    width: 75px;
+}
+
+.nav-menu {
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+}
+
+.nav-menu-item {
+    font-size: 18px;
+    margin: 0 10px;
+    line-height: 80px;
+    text-transform: uppercase;
+    width: max-content; /* No cortes nunca el contenido en el caso de ser dos palabras */
+}
+
+.nav-menu-link {
+    padding: 8px 12px;
+    border-radius: 3px;
+}
+
+.nav-menu-link:hover {
+    background-color: rgb(55, 96, 163);
+    transition: 0.5s;
+}
+
+.nav-toggle {
+    color: white;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 60px;
+    cursor: pointer;
+
+    display: none;
+}
+
+@media (max-width: 950px) {
+
+    .header {
+        height: 60px;
+    }
+
+    .logo {
+        font-size: 25px;
+        padding: 0 20px;
+        line-height: 60px;
+    }
+    
+    .logo img {
+        width: 55px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        margin-right: 0px;
+        background-color: #2c3e50;
+        position: fixed;
+        left: 0;
+        top: 60px;
+        width: 100%;
+        padding: 20px 0;
+
+        height: calc(100% - 60px); /* Ocupar todo el alto restandole los 60px del logo */
+        overflow-y: auto; /* Barra de navegación si el menú se desborda en cuanto a la altura */
+
+        left: 100%; /* Cuanto ocupará el menú al ser desplegado (En este caso todo el ancho) */
+        transition: left 0.3s;
+    }
+    
+    .nav-menu-item {
+        line-height: 70px;
+    }
+    
+    .nav-menu-link:hover {
+        background: none;
+        color: #83c5f7;
+    }
+
+    .nav-toggle {
+        display: block;
+        height: 55px;
+    }
+
+    .nav-menu_visible {
+        left: 0;
+    }
+
+    .nav-toggle:focus:not(:focus-visible) { /* Para no tener cudrado marcado al clicar con el ratón */
+        outline: none;
+    }
+}
+
+
+/* -- CONTENIDO PRINCIPAL -- */
+
+.titulo {
+    color: #264579;
+    letter-spacing: 10px;
+    text-shadow: 
+      4px 4px 0px #d5d5d5, 
+      7px 7px 0px rgba(0, 0, 0, 0.2);
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+    font-size: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+    margin-bottom: 13px;
+}
+
+.container-central {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 70px;
+}
+
+.cabecera {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+}
+
+.cabecera p {
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    font-size: 23px;
+}
+
+
+/* -- FORMULARIO -- */
+
+.formulario {
+    font-family: 'Quicksand', sans-serif;
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    padding: 1.5em;
+}
+
+.contact-wraper {
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.2),
+             -6px -6px 12px rgba(0, 0, 0, 0.2);
+
+}
+
+.contact-wraper > * {
+    padding: 1em;
+}
+
+.contact-info {
+    background: #264579;
+    color: white;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.2),
+    -6px -6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.contact-info h4,
+.contact-info ul,
+.contact-info p {
+    text-align: center;
+    margin: 0 0 1rem 0;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info ul li {
+    padding: .3em;
+}
+
+.contact-info i {
+    margin-right: 5px;
+}
+
+.contact-form form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contact-form form .block {
+    grid-column: 1 / 3;
+}
+
+.contact-form form p {
+    margin: 0;
+    padding: 1em;
+}
+
+.form-box .error-text { /* Validación Formulario */
+    color: #ca3434;
+    visibility: hidden;
+}
+
+.contact-form form button,
+.contact-form form input,
+.contact-form form textarea {
+    width: 100%;
+    padding: .7em;
+    border: none;
+    background: none;
+    border-bottom: 1px solid black;
+    outline: none;
+}
+
+.contact-form form button {
+    background: #264579;
+    color: white;
+    border: 0;
+    text-transform: uppercase;
+    padding: 1em;
+    font-family: 'Quicksand', sans-serif;
+    cursor: pointer;
+}
+
+.contact-form form button:hover,
+.contact-form form button:focus {
+    background: rgb(55, 96, 163);
+    color: black;
+    font-weight: bold;
+    transition: background-color 0.5s ease-out;
+    outline: 0;
+}
+
+.block button:disabled { /* Validación Formulario */
+    background: #82a0a2;
+    color: lightgray;
+    opacity: 80%;
+    cursor: default;
+}
+
+.form-box.form-error input { /* Validación Formulario */
+    border-bottom: 2px solid red;
+}
+
+.form-box.form-error .error-text{ /* Validación Formulario */
+    visibility: visible;
+}
+
+.form-box.form-success input { /* Validación Formulario */
+    border-bottom: 2px solid rgb(55, 96, 163);
+}
+
+/* -- MAPA -- */
+
+.mapa {
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    padding: 1.5em;
+    max-width: 1170px;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.2),
+    -6px -6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.mapa-informacion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #264579;
+    font-weight: bold;
+}
+
+.mapa-informacion p {
+    text-align: center;
+    margin: 0 0 1rem 0;
+    padding: .3em;
+}
+
+/* PANTALLAS GRANDES */
+@media (min-width: 700px) {
+    .formulario {
+        padding: 0 4rem;
+    }
+
+    .contact-wraper {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .contact-wraper > * {
+        padding: 2em;
+    }
+
+    .contact-info h4,
+    .contact-info ul,
+    .contact-info p {
+        padding: 1em;
+        text-align: left;
+    }    
+}
+
+@media (max-width: 700px) {
+    .mapa iframe{
+        margin: auto;
+        width: 100%;
+    }
+
+    .mapa {
+        flex-direction: column;
+    }
+}
+
+/* De 480px hacía abajo (Móviles) */
+@media (max-width: 480px) {
+
+    .cabecera {
+        width: 75%;
+    }
+
+    .cabecera h1 {
+        font-size: 35px;
+    }
+
+}
+
+/* -- FOOTER -- */
+
+.footer {
+    margin-top: 45px;
+    padding: 15px 0;
+    background-color: #264579;
+    margin-top: auto; /* Combinado con las propiedades del body,
+    quedará siempre abajo */
+}
+
+.footer .social {
+    text-align: center;
+    padding-bottom: 25px;
+    color: #d5d5d5;
+}
+
+.footer .social a {
+    font-size: 24px;
+    color: inherit;
+    border: 1px solid #ccc;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    opacity: 0.75;
+}
+
+.footer .social a {
+    opacity: 0.9;
+}
+
+.footer ul {
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.footer ul a {
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.footer ul li {
+    display: inline-block;
+    color: wheat;
+    padding: 0 15px;
+}
+
+.footer ul li a:hover {
+    opacity: 1;
+}
+
+.footer .copyright {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 13px;
+    color: #aaa;
+}

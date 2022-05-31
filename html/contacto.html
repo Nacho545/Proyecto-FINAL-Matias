@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/stylescontacto.css">
+        <link rel="shortcut icon" href="../imagenes/banner/logo_sinFondo.png" type="image/x-icon">
+        <title>Martí Amengual</title>
+        <!-- GOOGLE FONTs -->
+        <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Libre+Caslon+Text&family=Open+Sans&family=Poppins:wght@100&family=Quicksand:wght@300;400&family=Sansita+Swashed&family=Ubuntu:ital,wght@0,400;1,700&display=swap" rel="stylesheet"> 
+        <!-- FONT AWESOME -->
+        <script src="https://kit.fontawesome.com/121e48c564.js" crossorigin="anonymous"></script>
+        <!-- ANIMATE CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <!-- Script desplazamiento menú (defer para ignorar el script hasta que se cargue la página) -->
+        <script defer src="../js/menu.js"></script>
+    </head>
+    <body>
+        <!-- MENÚ -->
+        <header class="header">
+            <nav class="nav">
+                <a href="../index.html" class="logo nav-link"><img src="../imagenes/banner/logo_sinFondo.png" alt="Logo"></a>
+                <button class="nav-toggle" aria-label="Abrir menú"><i class="fas fa-bars"></i></button>
+                <ul class="nav-menu">
+                    <li class="nav-menu-item"><a href="../index.html" class="nav-menu-link nav-link">Inicio</a></li>
+                    <li class="nav-menu-item"><a href="servicios.html" class="nav-menu-link nav-link">Servicios</a></li>
+                    <li class="nav-menu-item"><a href="empresas.html" class="nav-menu-link nav-link">Empresas</a></li>
+                    <li class="nav-menu-item"><a href="maquinasOcasion.html" class="nav-menu-link nav-link">Máquinas Ocasión</a></li>
+                    <li class="nav-menu-item"><a href="contacto.html" class="nav-menu-link nav-link">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <!-- CONTENIDO PRINCIPAL -->
+        <div class="container-central">
+            <div class="cabecera">
+                <h1 class="titulo">Contacto</h1>
+                <p>Puede comunicarse con nosotros enviando este formulario:</p>
+                <p>O llamarnos, sin compromiso, al telf: 971 42 83 03</p>
+            </div>
+
+            <div class="formulario">
+                <div class="contact-wraper">
+                    <!-- Parte inputs -->
+                    <div class="contact-form">
+                        <h3>¿En que podemos ayudarle?</h3>
+                        <form action="" id="form">
+                            <p>
+                                <label for="name">Nombre</label>
+                                <input type="text" name="nombre" id="name">
+                            </p>
+                            <p>
+                                <label for="correo">Email</label>
+                                <input type="email" name="email" id="correo">
+                            </p>
+                            <p>
+                                <label for="phone">Teléfono</label>
+                                <input type="tel" name="telefono" id="phone">
+                            </p>
+                            <p>
+                                <label for="affair">Asunto</label>
+                                <input type="text" name="asunto" id="affair">
+                            </p>
+                            <p class="block">
+                                <label for="message">Mensaje</label>
+                                <textarea name="mensaje" id="message" rows="3" maxlength="500" style="resize: none;"></textarea>
+                            </p>
+                            <p class="block">
+                                <button type="submit" id="btn-submit">Enviar</button>
+                            </p>
+                        </form>
+                    </div>
+
+                    <!-- Parte información -->
+                    <div class="contact-info">
+                        <h4>Mas info.</h4>
+                        <ul>
+                            <li><i class="fas fa-location-dot"></i>SON FERRIOL - PALMA DE MALLORCA - C/ Sor Patrocini nº38</li>
+                            <li><i class="fas fa-phone"></i>971 42 83 03</li>
+                            <li><i class="fa-solid fa-envelope"></i>Correo: ...</li>
+                        </ul>
+                        <p>Este camino con una meta inalcanzable, es el que recorremos día a día para que nuestros clientes lo tengan más fácil</p>
+                        <p>martiamengual.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mapa">
+                <div class="mapa-informacion">
+                    <p>SON FERRIOL - PALMA DE MALLORCA - C/ Sor Patrocini nº38</p>
+                    <p>Contacte con nosotros sin compromiso: telf. 971 428303</p>
+                </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6150.404229712782!2d2.714825!3d39.577595!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1297946078c21877%3A0xd88bc216dfc0feed!2sC.%20del%20Sgto.%20Sancho%20Mulet%2C%2039%2C%2007198%20Son%20Ferriol%2C%20Islas%20Baleares!5e0!3m2!1ses!2ses!4v1652640668178!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <section class="footer">
+            <div class="social">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </div>
+
+            <ul class="list">
+                <li>
+                    <a href="../index.html">Inicio</a>
+                </li>
+                <li>
+                    <a href="servicios.html">Servicios</a>
+                </li>
+                <li>
+                    <a href="contacto.html">Sobre</a>
+                </li>
+                <li>
+                    <a href="avisoLegal.html">Aviso Legal</a>
+                </li>
+            </ul>
+
+            <p class="copyright">
+                Martí Amengual @ 2022
+            </p>
+        </section>
+    </body>
+</html>
